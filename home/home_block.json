@@ -1,0 +1,174 @@
+{
+    "user_id": "URSJ2ABTQ",
+    "view": { 
+         "type":"home",
+         "blocks":[ 
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": "*Greetings from TJLamp!* :tjbot:\nI can shine and pulse in many colors. What color shall I shine? 💡\n_Colors with a ⚡️ will cause the light to pulse._"
+                }
+            },
+            {
+                "type": "actions",
+                "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🔴"
+                        },
+                        "value": "red"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟢"
+                        },
+                        "value": "green"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🔵"
+                        },
+                        "value": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟠"
+                        },
+                        "value": "orange"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟡"
+                        },
+                        "value": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟣"
+                        },
+                        "value": "purple"
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🔴⚡️"
+                        },
+                        "value": "red-pulse"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟢⚡️"
+                        },
+                        "value": "green-pulse"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🔵⚡️"
+                        },
+                        "value": "blue-pulse"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟠⚡️"
+                        },
+                        "value": "orange-pulse"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟡⚡️"
+                        },
+                        "value": "yellow-pulse"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🟣⚡️"
+                        },
+                        "value": "purple-pulse"
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🌈"
+                        },
+                        "value": "rainbow"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🌈⚡️"
+                        },
+                        "value": "rainbow-pulse"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "⚪️"
+                        },
+                        "value": "white"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "⚫️"
+                        },
+                        "value": "black"
+                    }
+                ]
+            }
+        ]
+    }
+}
