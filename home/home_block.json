@@ -154,18 +154,18 @@
                         "text": {
                             "type": "plain_text",
                             "emoji": true,
-                            "text": "🎊"
+                            "text": "🎨"
                         },
-                        "value": "disco"
+                        "value": "random"
                     },
                     {
                         "type": "button",
                         "text": {
                             "type": "plain_text",
                             "emoji": true,
-                            "text": "🎨"
+                            "text": "🎨⚡️"
                         },
-                        "value": "random"
+                        "value": "random-pulse"
                     },
                     {
                         "type": "button",
@@ -190,6 +190,15 @@
             {
                 "type": "actions",
                 "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "🎊"
+                        },
+                        "value": "disco"
+                    },
                     {
                         "type": "button",
                         "text": {
