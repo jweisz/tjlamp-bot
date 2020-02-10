@@ -163,6 +163,15 @@
                         "text": {
                             "type": "plain_text",
                             "emoji": true,
+                            "text": "🎨"
+                        },
+                        "value": "random"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
                             "text": "⚪️"
                         },
                         "value": "white"
@@ -175,6 +184,20 @@
                             "text": "⚫️"
                         },
                         "value": "black"
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
+                            "text": "💪"
+                        },
+                        "value": "wave"
                     }
                 ]
             }

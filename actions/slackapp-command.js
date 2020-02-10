@@ -64,6 +64,8 @@ function sendWebSocketCommand(cmd, arg, callback) {
     } else if (cmd == '/disco') {
         msg['cmd'] = 'shine';
         msg['color'] = 'disco';
+    } else if (cmd == '/wave') {
+        msg['cmd'] = 'wave';
     }
 
     if (msg['cmd'] != undefined) {

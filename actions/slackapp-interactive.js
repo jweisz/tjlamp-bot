@@ -25,10 +25,13 @@ function sendWebSocketCommand(cmd, callback) {
         msg['cmd'] = 'off';
     } else if (cmd.split('-')[1] == 'pulse') {
         msg['cmd'] = 'pulse';
+        msg['color'] = cmd.split('-')[0];
+    } else if (cmd == 'wave') {
+        msg['cmd'] = 'wave';
     } else {
         msg['cmd'] = 'shine';
+        msg['color'] = cmd.split('-')[0];
     }
-    msg['color'] = cmd.split('-')[0];
     
     if (msg['cmd'] != undefined) {
         const ws = new WebSocket('ws://tjlamp.mybluemix.net:80/lamp');
