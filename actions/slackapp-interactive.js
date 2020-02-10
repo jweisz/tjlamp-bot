@@ -77,8 +77,10 @@ function sendWebSocketCommand(cmd, callback) {
 
     // choose a random color?
     if (msg['color'] != undefined && msg['color'] == 'random') {
-        var r = Math.random();
-        var color = hsv_to_rgb(r, 0.5, 0.95);
+        var h = Math.random();
+        var s = Math.random() * (1.0 - 0.5) + 0.5;
+        var v = Math.random() * (1.0 - 0.5) + 0.5
+        var color = hsv_to_rgb(h, s, v);
         msg['color'] = color;
         console.log("chose random color:", color);
     }
