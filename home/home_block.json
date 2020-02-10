@@ -154,6 +154,15 @@
                         "text": {
                             "type": "plain_text",
                             "emoji": true,
+                            "text": "🎊"
+                        },
+                        "value": "disco"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "emoji": true,
                             "text": "⚪️"
                         },
                         "value": "white"
