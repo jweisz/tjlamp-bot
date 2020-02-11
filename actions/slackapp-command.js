@@ -47,6 +47,48 @@ function usersInfo(accessToken, userId, callback) {
     });
 }
 
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+function hsv_to_rgb(h, s, v) {
+    var h_i = parseInt(h*6);
+    var f = h*6 - h_i;
+    var p = v * (1 - s);
+    var q = v * (1 - f*s);
+    var t = v * (1 - (1 - f) * s);
+    var r = 0;
+    var g = 0;
+    var b = 0;
+
+    if (h_i == 0) {
+        r = v;
+        g = t;
+        b = p;
+    } else if (h_i == 1) {
+        r = q;
+        g = v;
+        b = p;
+    } else if (h_i == 2) {
+        r = p;
+        g = v;
+        b = t;
+    } else if (h_i == 3) {
+        r = p;
+        g = q;
+        b = v;
+    } else if (h_i == 4) {
+        r = t;
+        g = p;
+        b = v;
+    } else if (h_i == 5) {
+        r = v;
+        g = p;
+        b = q;
+    }
+    return rgbToHex(parseInt(r*256), parseInt(g*256), parseInt(b*256))
+}
+
 function sendWebSocketCommand(cmd, arg, callback) {
     var msg = {};
     if (cmd == '/shine') {
@@ -66,6 +108,16 @@ function sendWebSocketCommand(cmd, arg, callback) {
         msg['color'] = 'disco';
     } else if (cmd == '/wave') {
         msg['cmd'] = 'wave';
+    }
+
+    // choose a random color?
+    if (msg['color'] != undefined && msg['color'] == 'random') {
+        var h = Math.random();
+        var s = Math.random() * (1.0 - 0.5) + 0.5;
+        var v = Math.random() * (1.0 - 0.5) + 0.5
+        var color = hsv_to_rgb(h, s, v);
+        msg['color'] = color;
+        console.log("chose random color:", color);
     }
 
     if (msg['cmd'] != undefined) {
@@ -118,9 +170,11 @@ function main(args) {
     };
 
     if (args.command == '/lamp') {
-        command['action_msg'] = `you turned the lamp ${args.text}`;
+        command['action_msg'] = `you turned the lamp ${args.text} 💡`;
+    } else if (args.command == '/wave') {
+        command['action_msg'] = `you made tjlamp wave! 💪`;
     } else {
-        command['action_msg'] = `you made the light ${args.command.substr(1)} ${args.text}!`
+        command['action_msg'] = `you made the light ${args.command.substr(1)} ${args.text}! 💡`
     }
 
     return new Promise(function (resolve, reject) {
